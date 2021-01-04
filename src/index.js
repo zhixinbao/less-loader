@@ -2,20 +2,12 @@ import path from "path";
 
 import less from "less";
 
-import { getOptions } from "loader-utils";
-import { validate } from "schema-utils";
-
 import schema from "./options.json";
 import { getLessOptions, isUnsupportedUrl, normalizeSourceMap } from "./utils";
 import LessError from "./LessError";
 
 async function lessLoader(source) {
-  const options = getOptions(this);
-
-  validate(schema, options, {
-    name: "Less Loader",
-    baseDataPath: "options",
-  });
+  const options = this.getOptions(schema);
 
   const callback = this.async();
   const lessOptions = getLessOptions(this, options);
