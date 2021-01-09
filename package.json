@@ -69,7 +69,7 @@
     "prettier": "^2.2.1",
     "standard-version": "^9.1.0",
     "strip-ansi": "^6.0.0",
-    "webpack": "^5.11.1"
+    "webpack": "^5.12.2"
   },
   "keywords": [
     "webpack",
